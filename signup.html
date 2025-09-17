@@ -3,167 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up - EduBridge</title>
-    <meta name="description" content="Create your EduBridge account and start your learning journey today">
-    
-    <!-- CSS -->
+    <title>Sign Up - EduBridge Remote Classroom</title>
     <link rel="stylesheet" href="styles.css">
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Lucide Icons CDN -->
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.462.0/lucide.min.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <a href="index.html" class="logo-link">
-                <div class="logo-container">
-                    <div class="logo-icon">
-                        <i data-lucide="graduation-cap"></i>
-                    </div>
-                    <div class="logo-text">
-                        <span class="logo-title">EduBridge</span>
-                        <span class="logo-subtitle">Remote Classroom for Rural Colleges</span>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </header>
-
-    <!-- Signup Form -->
-    <section class="auth-section">
+    <div class="min-h-screen bg-gradient-subtle flex items-center justify-center px-4 sm:px-6 lg:px-8">
         <div class="auth-container">
-            <div class="auth-card signup-card">
-                <div class="auth-header">
-                    <h1 class="auth-title">Join EduBridge</h1>
-                    <p class="auth-description">Create your account and start learning today</p>
+            <div class="auth-header">
+                <div class="auth-logo">
+                    <i data-lucide="book-open" class="auth-logo-icon"></i>
+                    <div class="auth-logo-text">
+                        <span class="auth-brand-name">EduBridge</span>
+                        <span class="auth-brand-subtitle">Remote Classroom</span>
+                    </div>
                 </div>
-                
-                <form class="auth-form" id="signupForm">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="firstName" class="form-label">First Name</label>
-                            <div class="input-container">
-                                <i data-lucide="user" class="input-icon"></i>
-                                <input 
-                                    type="text" 
-                                    id="firstName" 
-                                    name="firstName" 
-                                    placeholder="John" 
-                                    class="form-input"
-                                    required
-                                >
-                            </div>
-                        </div>
+                <h2 class="auth-title">Create Your Account</h2>
+                <p class="auth-description">Join thousands of educators transforming rural education</p>
+            </div>
 
-                        <div class="form-group">
-                            <label for="lastName" class="form-label">Last Name</label>
-                            <input 
-                                type="text" 
-                                id="lastName" 
-                                name="lastName" 
-                                placeholder="Doe" 
-                                class="form-input"
-                                required
-                            >
-                        </div>
-                    </div>
-
+            <form class="auth-form" id="signupForm">
+                <div class="form-row">
                     <div class="form-group">
-                        <label for="email" class="form-label">Email Address</label>
-                        <div class="input-container">
-                            <i data-lucide="mail" class="input-icon"></i>
-                            <input 
-                                type="email" 
-                                id="email" 
-                                name="email" 
-                                placeholder="john.doe@college.edu" 
-                                class="form-input"
-                                required
-                            >
-                        </div>
+                        <label for="firstName" class="form-label">First Name</label>
+                        <input type="text" id="firstName" name="firstName" class="form-input" placeholder="Enter your first name" required>
                     </div>
-
                     <div class="form-group">
-                        <label for="college" class="form-label">College</label>
-                        <div class="input-container">
-                            <i data-lucide="school" class="input-icon"></i>
-                            <select id="college" name="college" class="form-select" required>
-                                <option value="">Select your college</option>
-                                <option value="rural-tech">Rural Technical College</option>
-                                <option value="countryside-uni">Countryside University</option>
-                                <option value="village-academy">Village Academy</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
+                        <label for="lastName" class="form-label">Last Name</label>
+                        <input type="text" id="lastName" name="lastName" class="form-input" placeholder="Enter your last name" required>
                     </div>
+                </div>
 
-                    <div class="form-group">
-                        <label for="studentId" class="form-label">Student ID</label>
-                        <input 
-                            type="text" 
-                            id="studentId" 
-                            name="studentId" 
-                            placeholder="Enter your student ID" 
-                            class="form-input"
-                            required
-                        >
-                    </div>
+                <div class="form-group">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" id="email" name="email" class="form-input" placeholder="Enter your email" required>
+                </div>
 
-                    <div class="form-group">
-                        <label for="password" class="form-label">Password</label>
-                        <div class="input-container">
-                            <i data-lucide="lock" class="input-icon"></i>
-                            <input 
-                                type="password" 
-                                id="password" 
-                                name="password" 
-                                placeholder="Create a strong password" 
-                                class="form-input password-input"
-                                required
-                            >
-                            <button type="button" class="password-toggle" id="passwordToggle">
-                                <i data-lucide="eye" id="passwordIcon"></i>
-                            </button>
-                        </div>
-                    </div>
+                <div class="form-group">
+                    <label for="college" class="form-label">College/Institution</label>
+                    <input type="text" id="college" name="college" class="form-input" placeholder="Enter your college name" required>
+                </div>
 
-                    <div class="form-group">
-                        <label for="confirmPassword" class="form-label">Confirm Password</label>
-                        <div class="input-container">
-                            <i data-lucide="lock" class="input-icon"></i>
-                            <input 
-                                type="password" 
-                                id="confirmPassword" 
-                                name="confirmPassword" 
-                                placeholder="Confirm your password" 
-                                class="form-input password-input"
-                                required
-                            >
-                            <button type="button" class="password-toggle" id="confirmPasswordToggle">
-                                <i data-lucide="eye" id="confirmPasswordIcon"></i>
-                            </button>
-                        </div>
-                    </div>
+                <div class="form-group">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" id="password" name="password" class="form-input" placeholder="Create a strong password" required>
+                </div>
 
-                    <button type="submit" class="btn btn-primary btn-full btn-large">
-                        Create Account
-                    </button>
+                <div class="form-group">
+                    <label for="confirmPassword" class="form-label">Confirm Password</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" class="form-input" placeholder="Confirm your password" required>
+                </div>
 
-                    <div class="auth-footer">
-                        <span>Already have an account? </span>
-                        <a href="login.html" class="auth-link">Sign in</a>
-                    </div>
-                </form>
+                <div class="form-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox" class="checkbox-input" required>
+                        <span class="checkbox-text">I agree to the <a href="#" class="auth-link">Terms of Service</a> and <a href="#" class="auth-link">Privacy Policy</a></span>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-hero btn-full">Create Account</button>
+            </form>
+
+            <div class="auth-footer">
+                <p class="auth-footer-text">
+                    Already have an account? 
+                    <a href="login.html" class="auth-link">Sign in here</a>
+                </p>
+                <a href="index.html" class="auth-back-link">← Back to Home</a>
             </div>
         </div>
-    </section>
-
-    <script src="script.js"></script>
+    </div>
+    
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="signup.js"></script>
 </body>
 </html>

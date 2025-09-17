@@ -3,98 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - EduBridge</title>
-    <meta name="description" content="Sign in to your EduBridge account and continue your learning journey">
-    
-    <!-- CSS -->
+    <title>Login - EduBridge Remote Classroom</title>
     <link rel="stylesheet" href="styles.css">
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Lucide Icons CDN -->
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.462.0/lucide.min.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <a href="index.html" class="logo-link">
-                <div class="logo-container">
-                    <div class="logo-icon">
-                        <i data-lucide="graduation-cap"></i>
-                    </div>
-                    <div class="logo-text">
-                        <span class="logo-title">EduBridge</span>
-                        <span class="logo-subtitle">Remote Classroom for Rural Colleges</span>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </header>
-
-    <!-- Login Form -->
-    <section class="auth-section">
+    <div class="min-h-screen bg-gradient-subtle flex items-center justify-center px-4 sm:px-6 lg:px-8">
         <div class="auth-container">
-            <div class="auth-card">
-                <div class="auth-header">
-                    <h1 class="auth-title">Welcome Back</h1>
-                    <p class="auth-description">Sign in to continue your learning journey</p>
+            <div class="auth-header">
+                <div class="auth-logo">
+                    <i data-lucide="book-open" class="auth-logo-icon"></i>
+                    <div class="auth-logo-text">
+                        <span class="auth-brand-name">EduBridge</span>
+                        <span class="auth-brand-subtitle">Remote Classroom</span>
+                    </div>
                 </div>
-                
-                <form class="auth-form" id="loginForm">
-                    <div class="form-group">
-                        <label for="email" class="form-label">Email Address</label>
-                        <div class="input-container">
-                            <i data-lucide="mail" class="input-icon"></i>
-                            <input 
-                                type="email" 
-                                id="email" 
-                                name="email" 
-                                placeholder="Enter your email" 
-                                class="form-input"
-                                required
-                            >
-                        </div>
-                    </div>
+                <h2 class="auth-title">Welcome Back</h2>
+                <p class="auth-description">Sign in to your educator account</p>
+            </div>
 
-                    <div class="form-group">
-                        <label for="password" class="form-label">Password</label>
-                        <div class="input-container">
-                            <i data-lucide="lock" class="input-icon"></i>
-                            <input 
-                                type="password" 
-                                id="password" 
-                                name="password" 
-                                placeholder="Enter your password" 
-                                class="form-input password-input"
-                                required
-                            >
-                            <button type="button" class="password-toggle" id="passwordToggle">
-                                <i data-lucide="eye" id="passwordIcon"></i>
-                            </button>
-                        </div>
-                    </div>
+            <form class="auth-form" id="loginForm">
+                <div class="form-group">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" id="email" name="email" class="form-input" placeholder="Enter your email" required>
+                </div>
 
-                    <div class="form-options">
-                        <a href="#" class="forgot-password">Forgot password?</a>
-                    </div>
+                <div class="form-group">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" id="password" name="password" class="form-input" placeholder="Enter your password" required>
+                </div>
 
-                    <button type="submit" class="btn btn-primary btn-full btn-large">
-                        Sign In
-                    </button>
+                <div class="form-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox" class="checkbox-input">
+                        <span class="checkbox-text">Remember me</span>
+                    </label>
+                    <a href="#" class="forgot-password">Forgot password?</a>
+                </div>
 
-                    <div class="auth-footer">
-                        <span>Don't have an account? </span>
-                        <a href="signup.html" class="auth-link">Sign up</a>
-                    </div>
-                </form>
+                <button type="submit" class="btn btn-hero btn-full">Sign In</button>
+            </form>
+
+            <div class="auth-footer">
+                <p class="auth-footer-text">
+                    Don't have an account? 
+                    <a href="signup.html" class="auth-link">Sign up here</a>
+                </p>
+                <a href="index.html" class="auth-back-link">← Back to Home</a>
             </div>
         </div>
-    </section>
-
-    <script src="script.js"></script>
+    </div>
+    
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="login.js"></script>
 </body>
 </html>

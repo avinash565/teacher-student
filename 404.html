@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found - EduBridge Remote Classroom</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.462.0/lucide.min.css">
+</head>
+<body>
+    <div class="min-h-screen bg-gradient-subtle flex items-center justify-center px-4 sm:px-6 lg:px-8">
+        <div class="error-container">
+            <div class="error-content">
+                <i data-lucide="alert-circle" class="error-icon"></i>
+                <h1 class="error-title">404</h1>
+                <h2 class="error-subtitle">Page Not Found</h2>
+                <p class="error-description">
+                    Sorry, the page you are looking for doesn't exist or has been moved.
+                </p>
+                <div class="error-actions">
+                    <a href="index.html" class="btn btn-hero">Go Home</a>
+                    <a href="login.html" class="btn btn-outline">Sign In</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            lucide.createIcons();
+        });
+    </script>
+</body>
+</html>
