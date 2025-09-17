@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - EduBridge</title>
+    <meta name="description" content="Sign in to your EduBridge account and continue your learning journey">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo-link">
+                <div class="logo-container">
+                    <div class="logo-icon">
+                        <i data-lucide="graduation-cap"></i>
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-title">EduBridge</span>
+                        <span class="logo-subtitle">Remote Classroom for Rural Colleges</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </header>
+
+    <!-- Login Form -->
+    <section class="auth-section">
+        <div class="auth-container">
+            <div class="auth-card">
+                <div class="auth-header">
+                    <h1 class="auth-title">Welcome Back</h1>
+                    <p class="auth-description">Sign in to continue your learning journey</p>
+                </div>
+                
+                <form class="auth-form" id="loginForm">
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email Address</label>
+                        <div class="input-container">
+                            <i data-lucide="mail" class="input-icon"></i>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                placeholder="Enter your email" 
+                                class="form-input"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password" class="form-label">Password</label>
+                        <div class="input-container">
+                            <i data-lucide="lock" class="input-icon"></i>
+                            <input 
+                                type="password" 
+                                id="password" 
+                                name="password" 
+                                placeholder="Enter your password" 
+                                class="form-input password-input"
+                                required
+                            >
+                            <button type="button" class="password-toggle" id="passwordToggle">
+                                <i data-lucide="eye" id="passwordIcon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="form-options">
+                        <a href="#" class="forgot-password">Forgot password?</a>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-full btn-large">
+                        Sign In
+                    </button>
+
+                    <div class="auth-footer">
+                        <span>Don't have an account? </span>
+                        <a href="signup.html" class="auth-link">Sign up</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
